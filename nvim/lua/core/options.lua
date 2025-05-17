@@ -54,3 +54,12 @@ opt.foldlevel = 20
 opt.foldmethod = "expr"
 opt.foldexpr = "nvim_treesitter#foldexpr()" -- Utilize Treesitter folds
 
+-- Heighlight yankking
+vim.api.nvim_create_autocmd("TextYankPost", {
+  group = vim.api.nvim_create_augroup("YankHighlight", { clear = true }),
+  pattern = '*',
+  callback = function() 
+      vim.highlight.on_yank()
+  end,
+  desc = "Highlight Yank"
+})
