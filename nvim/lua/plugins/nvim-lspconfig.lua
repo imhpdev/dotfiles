@@ -205,6 +205,12 @@ return {
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         ts_ls = {},
+        svelte = {},
+        eslint = {},
+        angularls = {},
+        jsonls = {},
+        -- csharp_ls = {},
+        
         
 
         lua_ls = {
