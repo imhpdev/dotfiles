@@ -3,15 +3,30 @@ return {
     -- event = "InsertEnter",
     branch = "main", -- fix for deprecated functions coming in nvim 0.13
     dependencies = {
+        -- Snippet engine & associated nvim-cmp source
+        
+        -- LSP completion capabilities
+        -- https://github.com/hrsh7th/cmp-nvim-lsp
+        'hrsh7th/cmp-nvim-lsp',
+
+        -- Additional user-friendly snippets
+
+        -- https://github.com/hrsh7th/cmp-cmdline
+        'hrsh7th/cmp-cmdline',
+
         "hrsh7th/cmp-buffer", -- source for text in buffer
         "hrsh7th/cmp-path", -- source for file system paths
-        {
-            "L3MON4D3/LuaSnip",
-            -- follow latest release.
-            version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-            -- install jsregexp (optional!).
-            build = "make install_jsregexp",
-        },
+
+
+        -- https://github.com/L3MON4D3/LuaSnip
+        'L3MON4D3/LuaSnip',
+        -- {
+        --     "L3MON4D3/LuaSnip",
+        --     -- follow latest release.
+        --     version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        --     -- install jsregexp (optional!).
+        --     build = "make install_jsregexp",
+        -- },
         "saadparwaiz1/cmp_luasnip", -- autocompletion
         "rafamadriz/friendly-snippets", -- snippets
         "nvim-treesitter/nvim-treesitter",
